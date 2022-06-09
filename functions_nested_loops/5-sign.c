@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_sign - Returns 1 and prints + if n is greater than zero
+ * print_sign - Returns 1 and prints + if n is greater than zero
  * Returns 0 and prints 0 if n is zero
  * Returns -1 and prints - if n is less than zero
  *
@@ -9,7 +9,7 @@
  *
  * Return: Always 1 or 0 or -1
  */
-int _print_sign(int n)
+int print_sign(int n)
 {
 	if (n == 0)
 	{
