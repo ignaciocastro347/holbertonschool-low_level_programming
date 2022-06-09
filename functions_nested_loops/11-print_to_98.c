@@ -15,6 +15,8 @@ void print_to_98(int n)
 		if (n != origin)
 			printf(", ");
 		printf("%d", n);
+		if (n == 98)
+			break;
 		if (n < 98)
 		{
 			n++;
