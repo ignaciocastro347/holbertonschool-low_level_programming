@@ -17,14 +17,7 @@ void print_to_98(int n)
 		printf("%d", n);
 		if (n == 98)
 			break;
-		if (n < 98)
-		{
-			n++;
-		}
-		else
-		{
-			n--;
-		}
+		n = n < 98 ? n + 1 : n - 1;
 	} while (n != 98);
-
+	printf("\n");
 }
