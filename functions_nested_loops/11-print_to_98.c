@@ -13,11 +13,11 @@ void print_to_98(int n)
 
 	do {
 		if (n != origin)
+		{
 			printf(", ");
+			n = n < 98 ? n + 1 : n - 1;
+		}
 		printf("%d", n);
-		if (n == 98)
-			break;
-		n = n < 98 ? n + 1 : n - 1;
 	} while (n != 98);
 	printf("\n");
 }
