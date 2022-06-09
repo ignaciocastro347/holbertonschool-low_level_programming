@@ -11,7 +11,7 @@
  */
 int _print_sign(int n)
 {
-	if (n == 'a' 0)
+	if (n == 0)
 	{
 		_putchar('0');
 		return (0);
