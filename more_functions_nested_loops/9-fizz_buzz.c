@@ -4,7 +4,7 @@
  * main - start FizzBuzz
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -22,4 +22,5 @@ void main(void)
 				printf("%d ", i);
 		}
 	}
+	return (1);
 }
