@@ -2,6 +2,8 @@
 
 /**
  * main - start FizzBuzz
+ *
+ * Return: 1
  */
 
 int main(void)
@@ -25,5 +27,5 @@ int main(void)
 		}
 	}
 	printf("\n");
-	return (1);
+	return (0);
 }
