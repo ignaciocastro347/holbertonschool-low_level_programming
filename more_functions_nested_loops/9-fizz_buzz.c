@@ -1,24 +1,25 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_square - Print a squear
- *
- * @size: amount of # for side
+ * main - start FizzBuzz
  */
-void print_square(int size)
+
+void main(void)
 {
 	int i;
-	int j;
 
-	if (size > 0)
+	for (i = 1; i < 101; i++)
 	{
-		for (i = 0; i < size; i++)
+		if (i % 15 == 0)
+			printf("FizzBuzz ");
+		else
 		{
-			for (j = 0; j < size; j++)
-				_putchar('#');
-			_putchar('\n');
+			if (i % 5 == 0)
+				printf("Buzz ");
+			else if (i % 3 == 0)
+				printf("Fizz ");
+			else
+				printf("%d ", i);
 		}
 	}
-	else
-		_putchar('\n');
 }
