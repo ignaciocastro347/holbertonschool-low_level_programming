@@ -3,7 +3,7 @@
 /**
  * print_square - Print a squear
  *
- * @n: amount of # for side
+ * @size: amount of # for side
  */
 void print_square(int size)
 {
