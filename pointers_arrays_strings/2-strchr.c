@@ -3,7 +3,7 @@
  * _strchr - locates a character in a string
  * @s: string
  * @c: char
- * Return: pointer to the first character c in the string s, or NULL 
+ * Return: pointer to the first character c in the string s, or NULL
  */
 char *_strchr(char *s, char c)
 {
