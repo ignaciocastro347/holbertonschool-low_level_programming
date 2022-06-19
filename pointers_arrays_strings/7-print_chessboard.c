@@ -6,6 +6,7 @@
 void print_chessboard(char (*a)[8])
 {
 	int col = 0, row = 0;
+
 	while (col < 8)
 	{
 		row = 0;
