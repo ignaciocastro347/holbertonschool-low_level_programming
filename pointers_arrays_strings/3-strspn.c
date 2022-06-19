@@ -29,5 +29,8 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		i++;
 	}
+	/*check if s has at least one character*/
+	if (i == 0)
+		return (0);
 	return (i - 1);
 }
