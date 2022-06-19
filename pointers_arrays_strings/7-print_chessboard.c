@@ -11,9 +11,10 @@ void print_chessboard(char (*a)[8])
 	{
 		while (row < 8)
 		{
-			printf("%d", a[row][col]);
+			printf("%d", a[col][row]);
 			row++;
 		}
+		printf("\n");
 		col++;
 	}
 }
