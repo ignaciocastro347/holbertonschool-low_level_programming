@@ -6,7 +6,7 @@
  * @needle: string to be searched
  * Return: pointer to the byte in s that matches one byte in accept.
  */
-char *_strpbrk(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)
 {
 	int i = 0, j = 0;
 	int firstOcc = 0;
@@ -17,9 +17,9 @@ char *_strpbrk(char *haystack, char *needle)
 		return ('\0');
 	if (!needle[0])
 		return (haystack);
-	while (hystack[i])
+	while (haystack[i])
 	{
-		if (hystack[i] == needle[j])
+		if (haystack[i] == needle[j])
 		{
 			firstOcc = i;
 			while (needle[j])
@@ -29,7 +29,7 @@ char *_strpbrk(char *haystack, char *needle)
 				else
 					return ('\0');
 			}
-			return (&hystack[firstOcc]);
+			return (&haystack[firstOcc]);
 		}
 		i++;
 	}
