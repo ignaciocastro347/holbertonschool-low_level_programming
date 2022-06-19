@@ -10,7 +10,6 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0, j = 0;
 	int firstOcc = 0;
 
-	
 	if (haystack[0] == '\0')
 		return ('\0');
 	if (needle[0] == '\0')
@@ -33,10 +32,8 @@ char *_strstr(char *haystack, char *needle)
 					break;
 				}
 			}
-			if(j > 0)
-			{
+			if (j > 0)
 				return (&haystack[firstOcc]);
-			}
 		}
 		i++;
 	}
