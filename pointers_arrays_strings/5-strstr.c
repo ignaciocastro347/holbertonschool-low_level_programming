@@ -10,8 +10,6 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i = 0, j = 0;
 	int firstOcc = 0;
-	int charsFound = 0;
-	int wordFound = 0
 
 	if (!haystack[0])
 		return ('\0');
