@@ -8,7 +8,7 @@ int get_square_root(int, int);
  */
 int _sqrt_recursion(int n)
 {
-	return(get_square_root(0, n));
+	return (get_square_root(0, n));
 }
 
 /**
@@ -20,6 +20,7 @@ int _sqrt_recursion(int n)
 int get_square_root(int i, int n)
 {
 	int result = i * i;
+
 	if (result == n)
 		return (i);
 	else if (result > n)
