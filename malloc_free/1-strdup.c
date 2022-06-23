@@ -5,6 +5,7 @@
 /**
  * _strdup - returns a pointer to the duplicated string
  * @str: original string
+ * Return: return a pointer to a string
  */
 char *_strdup(char *str)
 {
