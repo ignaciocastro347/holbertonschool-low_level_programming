@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (; s1[i]; i++)
 		arr[i] = s1[i];
-	for (; s2[i]; j++)
+	for (; s2[j]; j++)
 		arr[i + j] = s2[j];
 	arr[i + j] = '\0';
 	return (arr);
