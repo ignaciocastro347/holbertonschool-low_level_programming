@@ -5,6 +5,8 @@
  * @name: name as string
  * @age: age as float
  * @owner: owner as string
+ *
+ * Description: A dog structure bro
  */
 struct dog
 {
