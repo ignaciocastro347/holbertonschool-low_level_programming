@@ -1,7 +1,7 @@
 #ifndef DOG_STRUCTURE
 #define DOG_STRUCTURE
 /**
- * struct my_struct - a dog structure
+ * struct dog - a dog structure
  * @name: name as string
  * @age: age as float
  * @owner: owner as string
