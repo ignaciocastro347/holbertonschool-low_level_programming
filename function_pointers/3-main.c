@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argv[2][1])
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 	op_func = get_op_func(argv[2][0]);
 	printf("%d\n", op_func(atoi(argv[1]), atoi(argv[3])));
