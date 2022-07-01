@@ -1,0 +1,4 @@
+all: gen_school
+
+gen_school:
+	gcc main.c school.c -o school
