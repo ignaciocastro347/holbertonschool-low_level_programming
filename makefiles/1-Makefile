@@ -5,3 +5,4 @@ all: gen_exec
 
 gen_exec:
 	${CC} ${SRC} -o holberton
+	${CC} ${SRC} -o school
