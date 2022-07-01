@@ -4,4 +4,4 @@ SRC = main.c school.c
 all: gen_exec
 
 gen_exec:
-	${CC} ${SRC} -o school
+	${CC} ${SRC} -o holberton
