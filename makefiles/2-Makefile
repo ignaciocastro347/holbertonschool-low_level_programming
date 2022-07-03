@@ -1,17 +1,9 @@
+.PHONY = all
+
 CC = gcc
-SRC = $(wildcard *.c)
-OBJ = $(SRC:%.c=%.o)
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
 NAME = school
 
-all: test
-
-test:
-	echo ${SRC}
-	echo ${OBJ}
-	for cfile in $(SRC); do \
-		${GCC} -c -o $(cfile:%.c%.o) cfile
-	
-
-gen_exec:
-	${CC} -c -o ${OBJ} ${SRC}
-	OBJ := 
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
