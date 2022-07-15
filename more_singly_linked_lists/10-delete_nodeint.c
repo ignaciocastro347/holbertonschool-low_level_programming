@@ -18,7 +18,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int idx)
 		free(aux);
 		*head = next;
 		return (1);
-	}	
+	}
 	while (aux)
 	{
 		if (i == idx - 1)
