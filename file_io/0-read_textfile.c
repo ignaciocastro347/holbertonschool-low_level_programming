@@ -23,6 +23,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(fd, buf, letters);
 	buf[letters] = '\0';
 	close(fd);
-	return (printf("%s", buf));
+	return (fprintf(stdout, "%s", buf));
 }
 
