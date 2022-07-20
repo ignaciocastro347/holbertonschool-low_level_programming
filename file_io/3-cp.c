@@ -21,10 +21,10 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 	        exit(98);
 	}
-	foutput = open(av[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
+	foutput = open(av[2], O_CREAT | O_RDWR | O_TRUNC);
 	if (foutput == -1)
 	{
-		dprintf(2, "Error: Can't write from file %s\n", av[2]);
+		dprintf(2, "Error: Can't write to file %s\n", av[2]);
 	        exit(99);
 	}
 	while ((len = read (finput, buff, sizeof(buff))) > 0)
@@ -43,5 +43,5 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't close fd %i\n", foutput);
 		exit(100);
 	}
-	return (1);
+	return (0);
 }
