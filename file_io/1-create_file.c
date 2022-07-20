@@ -8,20 +8,12 @@
 int create_file(const char *filename, char *text_content)
 {
 	int o, w;
-	/*char * buf;*/
 
 	if (!filename)
 		return (-1);
 
-	/*letters = strlen(text_content);
-	buf = malloc(sizeof(char) * letters);
-	if (buf == NULL)
-		return (0);*/
-
 	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	/*printf("o: %i\n", o);*/
-	/*printf("r: %i\n", r);*/
-	w = write(o, text_content, strlen(text_content));
+	w = write(o, text_content, text_content ? stren(text_content) : "");
 	if (o == -1 || w == -1)
 		return (-1);
 
