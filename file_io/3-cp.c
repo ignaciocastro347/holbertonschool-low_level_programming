@@ -17,7 +17,7 @@ int main(int ac, char **av)
 	}
 	finput = open(av[1], O_RDONLY);
 	foutput = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((len = read (finput, buff, sizeof(buff))) < 0)
+	while ((len = read (finput, buff, sizeof(buff))) > 0)
 	{
 		if (foutput == -1 || write (foutput, buff, len) != len)
 		{
