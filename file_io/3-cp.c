@@ -21,7 +21,7 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 	        exit(98);
 	}
-	foutput = open(av[2], O_CREAT | O_RDWR | O_TRUNC);
+	foutput = open(av[2], O_CREAT | O_RDWR | O_TRUNC, 0644);
 	if (foutput == -1)
 	{
 		dprintf(2, "Error: Can't write to file %s\n", av[2]);
