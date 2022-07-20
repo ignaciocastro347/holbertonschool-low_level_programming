@@ -7,24 +7,25 @@
  */
 int main(int ac, char **av)
 {
-	int finput, foutput, len;
+	int finput, foutput, len, stderror;
 	char buff[1024];
 
+	stderror = fileno(stderr);
 	if (ac != 3)
 	{
-		dprintf(stderr, "Usage: cp file_from file_to\n");
+		dprintf(stderror, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	finput = open(av[1], O_RDONLY);
 	if (finput == -1)
 	{
-		dprintf(stderr, "Error: Can't read from file %s\n", av[1]);
+		dprintf(stderror, "Error: Can't read from file %s\n", av[1]);
 	        exit(98);
 	}
 	foutput = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (foutput == -1)
 	{
-		dprintf(stderr, "Error: Can't write to %s\n", av[2]);
+		dprintf(stderror, "Error: Can't write to %s\n", av[2]);
 	        exit(99);
 	}
 	while ((len = read (finput, buff, sizeof(buff))) > 0)
@@ -35,12 +36,12 @@ int main(int ac, char **av)
 		}
 	if (close(finput) == -1)
 	{
-		dprintf(stderr, "Error: Can't close fd %i\n", finput);
+		dprintf(stderror, "Error: Can't close fd %i\n", finput);
 		exit(100);
 	}
 	if (close(foutput) == -1)
 	{
-		dprintf(stderr, "Error: Can't close fd %i\n", foutput);
+		dprintf(stderror, "Error: Can't close fd %i\n", foutput);
 		exit(100);
 	}
 	return (0);
