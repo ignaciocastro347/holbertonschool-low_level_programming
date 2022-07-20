@@ -7,16 +7,16 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int o, w, letters;
-	char * buf;
+	int o, w;
+	/*char * buf;*/
 
 	if (!filename)
 		return (-1);
 
-	letters = strlen(text_content);
+	/*letters = strlen(text_content);
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
-		return (0);
+		return (0);*/
 
 	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	/*printf("o: %i\n", o);*/
@@ -25,5 +25,5 @@ int create_file(const char *filename, char *text_content)
 	if (o == -1 || w == -1)
 		return (-1);
 
-	return (0);
+	return (1);
 }
