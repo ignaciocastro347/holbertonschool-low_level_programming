@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	int finput, foutput, len = 0;
+	int finput, foutput, len;
 	char buff[1024];
 
 	if (ac != 3)
@@ -22,17 +22,12 @@ int main(int ac, char **av)
 	        exit(98);
 	}
 	foutput = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (foutput == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-	        exit(99);
-	}
 	while ((len = read (finput, buff, sizeof(buff))) < 0)
 	{
-		if (write (foutput, buff, len) != len)
+		if (foutput == -1 || write (foutput, buff, len) != len)
 		{
-			len = -1;
-			break;
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
 		}
 	}
 	if (len == -1)
