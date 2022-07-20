@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * main - copy content to a file and paste to another file
- * @filename: name of file to create
- * @text_content: content of file to write
+ * @ac: number of args
+ * @av: list of args
  * Return: 0 on success, -1 on failure
  */
 int main(int ac, char **av)
@@ -17,9 +17,9 @@ int main(int ac, char **av)
 	}
 	finput = open(av[1], O_RDONLY);
 	foutput = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((len = read (finput, buff, sizeof(buff))) > 0)
+	while (len = read(finput, buff, sizeof(buff)) > 0)
 	{
-		if (foutput == -1 || write (foutput, buff, len) != len)
+		if (foutput == -1 || write(foutput, buff, len) != len)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
