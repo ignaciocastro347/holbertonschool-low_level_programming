@@ -27,18 +27,18 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 	        exit(99);
 	}
-	while (len < 0)
+	while ((len = read (finput, buff, sizeof(buff))) < 0)
 	{
-		if ((len = read (finput, buff, sizeof(buff))) < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-			exit(98);
-		}
 		if (write (foutput, buff, len) != len)
 		{
 			len = -1;
 			break;
 		}
+	}
+	if (len == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
 	}
 	if (close(finput) == -1)
 	{
