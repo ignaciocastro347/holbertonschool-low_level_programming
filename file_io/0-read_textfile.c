@@ -22,7 +22,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	read(fd, buf, letters);
 	buf[letters] = '\0';
+
+	if (!write(STDOUT_FILENO, buf, letters))
+	{
+		free(buf);
+		return (0);
+	}
+
+	free(buf);
 	close(fd);
-	return (fprintf(stdout, "%s", buf));
+	return (fd);
 }
 
