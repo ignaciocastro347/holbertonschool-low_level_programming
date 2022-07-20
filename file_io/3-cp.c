@@ -27,7 +27,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 	        exit(99);
 	}
-	while ((len < 0)
+	while (len < 0)
 	{
 		if ((len = read (finput, buff, sizeof(buff))) < 0)
 		{
