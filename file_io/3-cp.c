@@ -38,9 +38,9 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't close fd %i\n", finput);
 		exit(100);
 	}
-	if (close(finput) == -1)
+	if (close(foutput) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %i\n", finput);
+		dprintf(2, "Error: Can't close fd %i\n", foutput);
 		exit(100);
 	}
 	return (1);
