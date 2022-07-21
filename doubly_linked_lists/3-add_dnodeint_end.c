@@ -1,7 +1,6 @@
-
 #include "lists.h"
 /**
-`* add_dnodeint_end - add a  node to the end of a linked list
+ * add_dnodeint_end - add a node to the end of a linked list
  * @head: dlinked list
  * @n: int value
  * Return: pointer to a dlinked list
