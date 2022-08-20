@@ -1,1 +1,3 @@
-Exercises to practise functions nested loops
+# holbertonschool-low_level_programming
+
+In this repository I will practice some C exsercises.
