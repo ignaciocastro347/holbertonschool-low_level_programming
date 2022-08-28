@@ -38,13 +38,11 @@ int binary_search(int *array, size_t size, int value)
 		else
 		{
 			end = i - 1;
-			i = end / 2;
+			i = start + ((end - start) / 2);
 		}
 	}
-
-	if (i >= end)
+	if (i > end)
 		return (-1);
 	else
 		return (i);
-
 }
